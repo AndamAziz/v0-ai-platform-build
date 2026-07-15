@@ -1,6 +1,9 @@
 import { createClient } from "@/lib/supabase/server"
 import { ImageStudio } from "@/components/studios/image-studio"
 
+export const dynamic = "force-dynamic"
+export const revalidate = 0
+
 export default async function ImageStudioPage() {
   const supabase = await createClient()
 
