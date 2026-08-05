@@ -6,9 +6,6 @@ import { ImageIcon, VideoIcon, MicIcon, GlobeIcon, FolderOpen, Plus } from "luci
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
-export const dynamic = "force-dynamic"
-export const revalidate = 0
-
 export default async function GalleryPage({
   searchParams,
 }: {
