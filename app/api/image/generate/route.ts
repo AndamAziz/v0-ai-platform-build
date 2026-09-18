@@ -117,10 +117,14 @@ async function generateWithPollinations(prompt: string, size: string, style?: st
       try {
         console.log(`[v0] Trying Pollinations URL (attempt ${retryCount + 1}):`, tryUrl.substring(0, 100))
         
-        response = await fetch(tryUrl, {
+                response = await fetch(tryUrl, {
           method: "GET",
+          signal: AbortSignal.timeout(20000),
           headers: {
             "Accept": "image/png,image/jpeg,image/*",
+            ...(process.env.POLLINATIONS_TOKEN
+              ? { Authorization: `Bearer ${process.env.POLLINATIONS_TOKEN}` }
+              : {}),
           },
         })
         
