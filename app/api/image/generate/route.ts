@@ -106,9 +106,10 @@ async function generateWithPollinations(prompt: string, size: string, style?: st
 
   const enhancedPrompt = applyStyle(prompt, style)
   const encodedPrompt = encodeURIComponent(enhancedPrompt)
+    const seed = Math.floor(Math.random() * 1000000)
   const imageUrl =
     `${POLLINATIONS_API_URL}/${encodedPrompt}` +
-    `?width=${finalWidth}&height=${finalHeight}&model=flux&seed=${Date.now()}` +
+    `?width=${finalWidth}&height=${finalHeight}&model=sana&seed=${seed}` +
     (POLLINATIONS_TOKEN ? "&nologo=true" : "")
 
   console.log("[img] Pollinations request, token present:", Boolean(POLLINATIONS_TOKEN))
