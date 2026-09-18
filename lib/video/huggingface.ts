@@ -124,7 +124,7 @@ export async function handleHuggingFaceVideoGeneration(
       }
       
       const gradioClient = await Client.connect(selectedModel.spaceName!, {
-        hf_token: hfToken as `hf_${string}`,
+                token: hfToken as `hf_${string}`,
       })
       
       const apiInfo = await gradioClient.view_api()
