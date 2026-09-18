@@ -70,7 +70,7 @@ async function generateWithGemini(
   mimeType: string,
   prompt: string
 ): Promise<{ success: boolean; image?: string; error?: string }> {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=${GEMINI_API_KEY}`
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=${GEMINI_API_KEY}`
 
   const payload = {
     contents: [
