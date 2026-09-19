@@ -4,7 +4,7 @@ import { CREDIT_COSTS } from "@/lib/types"
 
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
-const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent"
 const GEMINI_IMAGE_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent"
 const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 
